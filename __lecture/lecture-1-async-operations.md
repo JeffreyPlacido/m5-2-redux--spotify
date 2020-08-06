@@ -48,10 +48,12 @@ const App = () => {
   const dispatch = useDispatch();
 
   const handleClick = () => {
+    dispatch(startRequestingData());
     fetch("/some-data")
       .then((res) => res.json())
-      .then((data) => {})
-      .catch((err) => {});
+      .then((data) => {});
+    dispatch(receiveData(data)).catch((err) => {});
+    dispatch(failToRetrieveData(err));
   };
 
   return <button onClick={handleClick}>Do something</button>;
@@ -85,13 +87,13 @@ const App = () => {
     fetch("/hockey")
       .then((res) => res.json())
       .then((scores) => {
-        // TODO
+        dispatch(receiveHockeyScores(scores));
       });
 
     fetch("/baseball")
       .then((res) => res.json())
       .then((scores) => {
-        // TODO
+        dispatch(receiveBaseballScores(scores));
       });
   }, []);
 
