@@ -1,5 +1,12 @@
-import React from "react";
+export const requestAccessToken = () => ({
+  type: "REQUEST_ACCESS_TOKEN",
+});
 
-export default function actions() {
-  return <div></div>;
-}
+export const receiveAccessToken = (token) => ({
+  type: "RECEIVE_ACCESS_TOKEN",
+  token,
+});
+
+export const receiveAccessTokenError = () => ({
+  type: "RECEIVE_ACCESS_TOKEN_ERROR",
+});
