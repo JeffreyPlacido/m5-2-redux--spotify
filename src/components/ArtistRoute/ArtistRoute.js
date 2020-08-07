@@ -90,7 +90,7 @@ const ArtistImage = styled.img`
   height: 175px;
   left: 104px;
   top: 59px;
-  border-radius: 190.5px;
+  border-radius: 50%;
 `;
 
 const ArtistName = styled.h1`
@@ -147,8 +147,6 @@ const TagsSection = styled.div`
 `;
 
 const TagsTitle = styled.h2`
-  width: 48px;
-  height: 26px;
   font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
@@ -159,7 +157,6 @@ const TagsTitle = styled.h2`
 
 const TagsContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   width: 400px;
   align-items: center;
 `;
@@ -168,8 +165,6 @@ const Tag = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-  border-radius: 4px;
   padding: 30px;
 `;
 
